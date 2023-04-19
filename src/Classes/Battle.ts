@@ -1,7 +1,7 @@
 import Player from "./Player";
 import { d20 } from "../Helpers/dices";
 
-export class Battle {
+export default class Battle {
     private readonly player1: Player;
     private readonly player2: Player;
 

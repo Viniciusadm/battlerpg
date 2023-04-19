@@ -2,15 +2,21 @@
   "name": "battlerpg",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "devDependencies": {  
+    "typescript": "^5.0.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viniciusadm/battlerpg.git"
+  },
+  "author": "Vinícius Alves de Morais",
   "license": "ISC",
-  "type": "module",
-  "devDependencies": {
-    "typescript": "^5.0.4"
-  }
+  "bugs": {
+    "url": "https://github.com/Viniciusadm/battlerpg/issues"
+  },
+  "type": "module"
 }

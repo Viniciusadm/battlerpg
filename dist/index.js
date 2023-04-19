@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Player = exports.Dice = exports.Battle = exports.Inventory = exports.Character = void 0;
+const Character_1 = require("./Classes/Abstracts/Character");
+exports.Character = Character_1.default;
+const Inventory_1 = require("./Classes/Abstracts/Inventory");
+exports.Inventory = Inventory_1.default;
+const Battle_1 = require("./Classes/Battle");
+exports.Battle = Battle_1.default;
+const Dice_1 = require("./Classes/Dice");
+exports.Dice = Dice_1.default;
+const Player_1 = require("./Classes/Player");
+exports.Player = Player_1.default;

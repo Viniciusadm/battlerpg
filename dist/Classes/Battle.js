@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Battle = void 0;
 const dices_1 = require("../Helpers/dices");
 class Battle {
     constructor(player1, player2) {
@@ -21,4 +20,4 @@ class Battle {
         }
     }
 }
-exports.Battle = Battle;
+exports.default = Battle;
