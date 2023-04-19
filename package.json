@@ -1,9 +1,9 @@
 {
   "name": "battlerpg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
-  "devDependencies": {  
+  "devDependencies": {
     "typescript": "^5.0.4"
   },
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Viniciusadm/battlerpg/issues"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "csstype": "^3.1.2"
+  }
 }

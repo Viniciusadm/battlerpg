@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const Inventory_1 = require("./Inventory");
-class Character extends Inventory_1.default {
+import Inventory from "./Inventory";
+export default class Character extends Inventory {
     constructor(attributes) {
         super();
         this.attributes = Object.assign(Object.assign({}, attributes), { life: 10, totalLife: 10 });
@@ -33,4 +31,3 @@ class Character extends Inventory_1.default {
         return this.attributes.life < (this.attributes.totalLife / 2);
     }
 }
-exports.default = Character;

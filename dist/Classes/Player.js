@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const Character_1 = require("./Abstracts/Character");
-const dices_1 = require("../Helpers/dices");
-class Player extends Character_1.default {
+import Character from "./Abstracts/Character";
+import { d20, d6 } from "../Helpers/dices";
+export default class Player extends Character {
     constructor(attributes, skills) {
         super(attributes);
         this.armor = 0;
@@ -24,15 +22,15 @@ class Player extends Character_1.default {
     }
     tryToHit(target) {
         const playerDexterity = this.getExpecifiedSkill('strength');
-        const { value: playerHit } = dices_1.d20.roll(playerDexterity);
+        const { value: playerHit } = d20.roll(playerDexterity);
         return playerHit > target.armor;
     }
     attack() {
-        return dices_1.d6.roll(this.getExpecifiedSkill('strength')).value;
+        return d6.roll(this.getExpecifiedSkill('strength')).value;
     }
     heal() {
         if (this.removeInventory('Potion', 1)) {
-            return dices_1.d6.roll(this.getExpecifiedSkill('wisdom')).value;
+            return d6.roll(this.getExpecifiedSkill('wisdom')).value;
         }
         return 0;
     }
@@ -43,4 +41,3 @@ class Player extends Character_1.default {
         return 10 + this.getExpecifiedSkill('dexterity');
     }
 }
-exports.default = Player;

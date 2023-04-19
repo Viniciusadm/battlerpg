@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const dices_1 = require("../Helpers/dices");
-class Battle {
+import { d20 } from "../Helpers/dices";
+export default class Battle {
     constructor(player1, player2) {
         this.player1 = player1;
         this.player2 = player2;
@@ -10,8 +8,8 @@ class Battle {
     }
     getInitiative() {
         const order = [];
-        order.push(dices_1.d20.roll(this.player1.getExpecifiedSkill('dexterity')).value);
-        order.push(dices_1.d20.roll(this.player2.getExpecifiedSkill('dexterity')).value);
+        order.push(d20.roll(this.player1.getExpecifiedSkill('dexterity')).value);
+        order.push(d20.roll(this.player2.getExpecifiedSkill('dexterity')).value);
         if (order[0] > order[1]) {
             return [this.player1, this.player2];
         }
@@ -20,4 +18,3 @@ class Battle {
         }
     }
 }
-exports.default = Battle;
