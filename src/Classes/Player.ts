@@ -107,6 +107,10 @@ export default class Player extends Character {
         return this.spells.find(spell => spell.name === spellName);
     }
 
+    public setEnergyInMax(): void {
+        this.energy = this.getCalculatedEnergy();
+    }
+
     private getMyResist(): number {
         return 8 + this.getExpecifiedSkill('intelligence');
     }
