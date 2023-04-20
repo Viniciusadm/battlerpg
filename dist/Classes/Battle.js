@@ -5,6 +5,8 @@ export default class Battle {
         this.player2 = player2;
         this.player1.setLifeInMax();
         this.player2.setLifeInMax();
+        this.player1.setEnergyInMax();
+        this.player2.setEnergyInMax();
     }
     getInitiative() {
         const order = [];
